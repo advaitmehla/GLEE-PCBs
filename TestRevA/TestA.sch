@@ -3182,17 +3182,22 @@ Standard 6 pin header for AVR programming</description>
 <wire x1="33.02" y1="12.7" x2="27.94" y2="12.7" width="0.1524" layer="91"/>
 <label x="27.94" y="12.7" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="RF1" gate="G$1" pin="NSS"/>
+<wire x1="213.36" y1="35.56" x2="215.9" y2="35.56" width="0.1524" layer="91"/>
+<label x="215.9" y="35.56" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="I1" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="INT1_A/G"/>
-<wire x1="226.06" y1="116.84" x2="228.6" y2="116.84" width="0.1524" layer="91"/>
-<label x="228.6" y="116.84" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <label x="104.14" y="78.74" size="1.778" layer="95" xref="yes"/>
 <pinref part="IC2" gate="G$1" pin="PD2(PTCXY/INT0/OC3B/OC4B)"/>
 <wire x1="104.14" y1="78.74" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U2" gate="G$1" pin="DRDY_M"/>
+<wire x1="228.6" y1="106.68" x2="226.06" y2="106.68" width="0.1524" layer="91"/>
+<label x="228.6" y="106.68" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="I2" class="0">
@@ -3202,33 +3207,33 @@ Standard 6 pin header for AVR programming</description>
 <label x="233.68" y="114.3" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
-<label x="104.14" y="12.7" size="1.778" layer="95" xref="yes"/>
-<pinref part="IC2" gate="G$1" pin="PE2(ADC6/PTCY/ICP3/SS1)"/>
-<wire x1="104.14" y1="12.7" x2="99.06" y2="12.7" width="0.1524" layer="91"/>
+<label x="104.14" y="48.26" size="1.778" layer="95" xref="yes"/>
+<pinref part="IC2" gate="G$1" pin="PC3(ADC3/PTCY)"/>
+<wire x1="104.14" y1="48.26" x2="99.06" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="I3" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="DRDY_M"/>
-<wire x1="226.06" y1="106.68" x2="231.14" y2="106.68" width="0.1524" layer="91"/>
-<label x="231.14" y="106.68" size="1.778" layer="95" xref="yes"/>
-</segment>
 <segment>
 <label x="104.14" y="73.66" size="1.778" layer="95" xref="yes"/>
 <pinref part="IC2" gate="G$1" pin="PD1(PTCXY/OC4A/TXD0)"/>
 <wire x1="99.06" y1="73.66" x2="104.14" y2="73.66" width="0.1524" layer="91"/>
 </segment>
-</net>
-<net name="I4" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="INT_M"/>
 <wire x1="226.06" y1="104.14" x2="236.22" y2="104.14" width="0.1524" layer="91"/>
 <label x="236.22" y="104.14" size="1.778" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="I4" class="0">
 <segment>
 <label x="104.14" y="68.58" size="1.778" layer="95" xref="yes"/>
 <pinref part="IC2" gate="G$1" pin="PD0(PTCXY/OC3A/RXD0)"/>
 <wire x1="99.06" y1="68.58" x2="104.14" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<label x="228.6" y="116.84" size="1.778" layer="95" xref="yes"/>
+<pinref part="U2" gate="G$1" pin="INT1_A/G"/>
+<wire x1="228.6" y1="116.84" x2="226.06" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="XTAL1" class="0">
@@ -3306,13 +3311,6 @@ Standard 6 pin header for AVR programming</description>
 <pinref part="R4" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="109.22" x2="86.36" y2="111.76" width="0.1524" layer="91"/>
 <junction x="86.36" y="111.76"/>
-</segment>
-</net>
-<net name="SS" class="0">
-<segment>
-<pinref part="RF1" gate="G$1" pin="NSS"/>
-<wire x1="213.36" y1="35.56" x2="215.9" y2="35.56" width="0.1524" layer="91"/>
-<label x="215.9" y="35.56" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -3470,21 +3468,21 @@ Standard 6 pin header for AVR programming</description>
 </net>
 <net name="DIO1" class="0">
 <segment>
+<pinref part="IC2" gate="G$1" pin="PB0(ICP1/CLKO/PTCXY)"/>
+<wire x1="33.02" y1="22.86" x2="30.48" y2="22.86" width="0.1524" layer="91"/>
+<label x="30.48" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
 <pinref part="RF1" gate="G$1" pin="DIO1"/>
 <wire x1="172.72" y1="30.48" x2="167.64" y2="30.48" width="0.1524" layer="91"/>
 <label x="167.64" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-<segment>
-<pinref part="IC2" gate="G$1" pin="PD7(ICP1/CLKO/PTCXY)"/>
-<wire x1="33.02" y1="27.94" x2="30.48" y2="27.94" width="0.1524" layer="91"/>
-<label x="30.48" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
-</segment>
 </net>
 <net name="DIO0" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="PD6(OC0A/PTCXY/AIN0)"/>
-<wire x1="33.02" y1="33.02" x2="30.48" y2="33.02" width="0.1524" layer="91"/>
-<label x="30.48" y="33.02" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="IC2" gate="G$1" pin="PB1(OC1A/PTCXY)"/>
+<wire x1="33.02" y1="17.78" x2="30.48" y2="17.78" width="0.1524" layer="91"/>
+<label x="30.48" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="RF1" gate="G$1" pin="DIO0"/>
@@ -3494,9 +3492,9 @@ Standard 6 pin header for AVR programming</description>
 </net>
 <net name="DIO2" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="PB0(ICP1/CLKO/PTCXY)"/>
-<wire x1="33.02" y1="22.86" x2="30.48" y2="22.86" width="0.1524" layer="91"/>
-<label x="30.48" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="IC2" gate="G$1" pin="PD7(ICP1/CLKO/PTCXY)"/>
+<wire x1="33.02" y1="27.94" x2="30.48" y2="27.94" width="0.1524" layer="91"/>
+<label x="30.48" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="RF1" gate="G$1" pin="DIO2"/>
@@ -3506,9 +3504,9 @@ Standard 6 pin header for AVR programming</description>
 </net>
 <net name="DIO3" class="0">
 <segment>
-<pinref part="IC2" gate="G$1" pin="PB1(OC1A/PTCXY)"/>
-<wire x1="33.02" y1="17.78" x2="30.48" y2="17.78" width="0.1524" layer="91"/>
-<label x="30.48" y="17.78" size="1.778" layer="95" rot="R180" xref="yes"/>
+<pinref part="IC2" gate="G$1" pin="PD6(OC0A/PTCXY/AIN0)"/>
+<wire x1="33.02" y1="33.02" x2="30.48" y2="33.02" width="0.1524" layer="91"/>
+<label x="30.48" y="33.02" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="RF1" gate="G$1" pin="DIO3"/>
@@ -3589,6 +3587,30 @@ Standard 6 pin header for AVR programming</description>
 <wire x1="287.02" y1="66.04" x2="287.02" y2="40.64" width="0.1524" layer="91"/>
 <pinref part="IC3" gate="G$1" pin="RF2"/>
 <wire x1="287.02" y1="40.64" x2="289.56" y2="40.64" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DIO4" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="PD5(OC0B/T1/PTCXY)"/>
+<wire x1="33.02" y1="38.1" x2="30.48" y2="38.1" width="0.1524" layer="91"/>
+<label x="30.48" y="38.1" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RF1" gate="G$1" pin="DIO4"/>
+<wire x1="172.72" y1="15.24" x2="167.64" y2="15.24" width="0.1524" layer="91"/>
+<label x="167.64" y="15.24" size="1.778" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="DIO5" class="0">
+<segment>
+<pinref part="IC2" gate="G$1" pin="PE2(ADC6/PTCY/ICP3/SS1)"/>
+<wire x1="99.06" y1="12.7" x2="104.14" y2="12.7" width="0.1524" layer="91"/>
+<label x="104.14" y="12.7" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="RF1" gate="G$1" pin="DIO5"/>
+<wire x1="172.72" y1="10.16" x2="167.64" y2="10.16" width="0.1524" layer="91"/>
+<label x="167.64" y="10.16" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
